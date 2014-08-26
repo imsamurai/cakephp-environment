@@ -7,19 +7,30 @@
  * Format: http://book.cakephp.org/2.0/en/views.html
  * 
  */
-
 App::uses('FixtureInjector', 'Environment.TestSuite/Fixture');
-App::load('FixtureInjector');
+if (!class_exists('FixtureInjector', false)) {
+	App::load('FixtureInjector');
+}
 App::uses('CakeTestRunner', 'Environment.TestSuite');
-App::load('CakeTestRunner');
+if (!class_exists('CakeTestRunner', false)) {
+	App::load('CakeTestRunner');
+}
 App::uses('CakeTestSuiteCommand', 'Environment.TestSuite');
-App::load('CakeTestSuiteCommand');
+if (!class_exists('CakeTestSuiteCommand', false)) {
+	App::load('CakeTestSuiteCommand');
+}
 App::uses('HHVMTestSuiteDispatcher', 'Environment.TestSuite');
-App::load('HHVMTestSuiteDispatcher');
+if (!class_exists('HHVMTestSuiteDispatcher', false)) {
+	App::load('HHVMTestSuiteDispatcher');
+}
 App::uses('CakeBaseReporter', 'Environment.TestSuite/Reporter');
-App::load('CakeBaseReporter');
+if (!class_exists('CakeBaseReporter', false)) {
+	App::load('CakeBaseReporter');
+}
 App::uses('CakeHtmlReporter', 'Environment.TestSuite/Reporter');
-App::load('CakeHtmlReporter');
+if (!class_exists('CakeHtmlReporter', false)) {
+	App::load('CakeHtmlReporter');
+}
 
 Configure::write('Environment', Hash::mergeDiff(array(
 			'console' => array(
