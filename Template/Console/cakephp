@@ -28,6 +28,6 @@ done
 LIB=$(dirname -- "$LIB")/
 APP=`pwd`
 
-exec /usr/local/bin/php -q "$LIB"cake.php -working "$APP" "$@"
+exec php -q "$LIB"cake.php -working "$APP" "$@"
 
 exit;
