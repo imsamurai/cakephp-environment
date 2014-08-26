@@ -1,0 +1,35 @@
+{
+  "name": "imsamurai/cakephp-environment",
+  "description": "Provides improovement for tests, packagist, etc",
+  "type": "cakephp-plugin",
+  "keywords": [
+    "cakephp",
+    "packagist",
+	"phpunit",
+	"environment",
+    "plugin"
+  ],
+  "homepage": "http://github.com/imsamurai/cakephp-environment",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Shamray Alexander",
+      "email": "im.samuray@gmail.com",
+      "homepage": "https://imsamurai.me",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "composer/installers": "*",
+	"phpunit/phpunit": "4.1.*",
+	"imsamurai/cakephp-advancedshell": "1.3.*"
+  },
+  "support": {
+    "email": "im.samuray@gmail.com",
+    "issues": "https://github.com/imsamurai/cakephp-environment/issues",
+    "source": "https://github.com/imsamurai/cakephp-environment"
+  },
+  "extra": {
+    "installer-name": "Environment"
+  }
+}
