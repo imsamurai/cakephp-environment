@@ -20,11 +20,5 @@
 $ds = DIRECTORY_SEPARATOR;
 
 require_once dirname(dirname(dirname(__FILE__))) . $ds . 'vendor' . $ds . 'autoload.php';
-App::load('HHVMTestSuiteDispatcher');
-App::load('FixtureInjector');
-App::load('CakeBaseReporter');
-App::load('CakeHtmlReporter');
-App::load('CakeTestSuiteCommand');
-App::load('CakeTestRunner');
 
 return ShellDispatcher::run($argv);

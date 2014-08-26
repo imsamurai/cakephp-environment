@@ -66,11 +66,4 @@ if (Configure::read('debug') < 1) {
 	die(__d('cake_dev', 'Debug setting does not allow access to this url.'));
 }
 
-App::load('HHVMTestSuiteDispatcher');
-App::load('FixtureInjector');
-App::load('CakeBaseReporter');
-App::load('CakeHtmlReporter');
-App::load('CakeTestSuiteCommand');
-App::load('CakeTestRunner');
-
 HHVMTestSuiteDispatcher::run();
