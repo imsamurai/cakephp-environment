@@ -14,10 +14,10 @@ App::uses('CakeTestSuiteCommand', 'Environment.TestSuite');
 App::uses('CakeTestRunner', 'Environment.TestSuite');
 App::uses('HHVMTestSuiteDispatcher', 'Environment.TestSuite');
 
+App::load('FixtureInjector');
 App::load('CakeTestRunner');
 App::load('CakeTestSuiteCommand');
 App::load('HHVMTestSuiteDispatcher');
-App::load('FixtureInjector');
 App::load('CakeBaseReporter');
 App::load('CakeHtmlReporter');
 
