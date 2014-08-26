@@ -14,12 +14,12 @@ App::uses('CakeTestSuiteCommand', 'Environment.TestSuite');
 App::uses('CakeTestRunner', 'Environment.TestSuite');
 App::uses('HHVMTestSuiteDispatcher', 'Environment.TestSuite');
 
+App::load('CakeTestRunner');
+App::load('CakeTestSuiteCommand');
 App::load('HHVMTestSuiteDispatcher');
 App::load('FixtureInjector');
 App::load('CakeBaseReporter');
 App::load('CakeHtmlReporter');
-App::load('CakeTestSuiteCommand');
-App::load('CakeTestRunner');
 
 Configure::write('Environment', Hash::mergeDiff(array(
 			'console' => array(
