@@ -8,17 +8,11 @@
  * 
  */
 App::uses('FixtureInjector', 'Environment.TestSuite/Fixture');
-App::load('FixtureInjector');
 App::uses('CakeBaseReporter', 'Environment.TestSuite/Reporter');
-App::load('CakeBaseReporter');
 App::uses('CakeHtmlReporter', 'Environment.TestSuite/Reporter');
-App::uses('CakeHtmlReporter', 'Environment.TestSuite');
 App::uses('CakeTestSuiteCommand', 'Environment.TestSuite');
-App::load('CakeTestSuiteCommand');
 App::uses('CakeTestRunner', 'Environment.TestSuite');
-App::load('CakeTestRunner');
 App::uses('HHVMTestSuiteDispatcher', 'Environment.TestSuite');
-App::load('HHVMTestSuiteDispatcher');
 
 Configure::write('Environment', Hash::mergeDiff(array(
 			'console' => array(
