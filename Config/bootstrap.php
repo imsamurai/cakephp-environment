@@ -17,11 +17,18 @@ App::uses('HHVMTestSuiteDispatcher', 'Environment.TestSuite');
 if (!class_exists('FixtureInjector')) {
 	App::load('FixtureInjector');
 }
-App::load('CakeTestRunner');
-App::load('CakeTestSuiteCommand');
-App::load('HHVMTestSuiteDispatcher');
-App::load('CakeBaseReporter');
-App::load('CakeHtmlReporter');
+if (!class_exists('CakeTestRunner')) {
+	App::load('CakeTestRunner');
+}
+if (!class_exists('HHVMTestSuiteDispatcher')) {
+	App::load('HHVMTestSuiteDispatcher');
+}
+if (!class_exists('CakeBaseReporter')) {
+	App::load('CakeBaseReporter');
+}
+if (!class_exists('CakeHtmlReporter')) {
+	App::load('CakeHtmlReporter');
+}
 
 Configure::write('Environment', Hash::mergeDiff(array(
 			'console' => array(
