@@ -31,8 +31,12 @@ App::uses('CakeHtmlReporter', 'Environment.TestSuite/Reporter');
 if (!class_exists('CakeHtmlReporter', false)) {
 	App::load('CakeHtmlReporter');
 }
-
-Configure::write('Environment', Hash::mergeDiff(array(
+if (!class_exists('Hash')) {
+	$merge = array('Set', 'merge');
+} else {
+	$merge = array('Hash', 'mergeDiff');
+}
+Configure::write('Environment', call_user_func($merge, array(
 			'console' => array(
 				'handler' => 'hhvm'
 			),
