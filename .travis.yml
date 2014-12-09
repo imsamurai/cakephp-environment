@@ -42,6 +42,8 @@ before_script:
             return ShellDispatcher::run(\$argv);
         " > ../cakephp/app/Console/cake.php;
         echo "Configure::write('debug', 0);" >> ../cakephp/app/Config/core.php;
+        curl -XGET '127.0.0.1:9200' -vvvv;
+        curl -XPUT '127.0.0.1:9200/test_index';
     fi;
   - if [ "$PHPCS" == 1 ]; then
       rm -rf ~/.phpenv/versions/$(phpenv version-name)/pear/PHP/CodeSniffer/Standards/CakePHP;
